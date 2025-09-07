@@ -1,0 +1,52 @@
+html{
+    font-family: "Roboto Mono", monospace;
+}
+.header{
+    top: 20px;
+    margin: 0 auto;
+    padding: 0.2rem 0.5rem;
+    width: 30%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: gray;
+}
+.header-content{
+
+}
+.header-options{
+
+}
+.header p, .header a{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 55rem;
+}
+
+.slideshow{
+
+}
+.slideshow img{
+    max-width: 100%;
+}
+
+.project{
+    display: inline-block;
+    margin-right: 3rem;
+}
+.project p{
+    margin: 0;
+}
+
+.text-secondary{
+    color:gray;
+}
+
