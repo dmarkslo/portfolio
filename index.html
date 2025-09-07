@@ -6,20 +6,27 @@
     <title>DMark - Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    
+    <script src="https://kit.fontawesome.com/ddf9c29955.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
+
+    <!-- TODO: image alt texts, fix dark mode transition,
+      json data for projects (only temp.), design -->
     
     <div class="header">
         <div class="header-content">
             <p>DMark's portfolio</p>
         </div>
         <div class="header-options">
-            <a href="">contact</a>
-            <a href="">dark</a>
+            <p onclick="openContactForm()" class="nav-button pointer">contact</p>
+            <i onclick="toggleDarkMode()" class="fa-regular fa-lightbulb dark-toggle"></i>
         </div>
     </div>
 
@@ -27,15 +34,31 @@
     <section class="about">
         <div class="wrapper">
             <h2>About me.</h2>
-            <p>I'm a 21 year old software developer from Slovenia. I mainly build websites and web apps, using technologies like laravel and vue. I am studying computer science at the University of Ljubljana.</p>
+            <p>I'm a 21 year old software developer from Slovenia. 
+                I mainly build websites and web apps, using technologies 
+                like laravel and vue. I am studying computer science at the University of Ljubljana.</p>
         </div>
     </section>
 
     <section class="featured">
         <div class="wrapper">
             <h2>Featured.</h2>
-            <div class="slideshow">
-                <img src="https://picsum.photos/1920/1080" alt="">
+            <div class="featured-projects-list">
+                <div class="featured-project">
+                    
+                    <h3>Avioapp</h3>
+                    <p>
+                        A complete presentation solution designed for Aerospace expo.<br>
+                        Everything you need to inform, compare, and convince — all in one app.
+                    </p>
+
+                    <div class="featured-project-images">
+                        <img src="assets/aeroserviceapp_1.webp" alt="">
+                        <img src="assets/aeroserviceapp_2.webp" alt="">
+                    </div>
+                    
+                </div>
+                
             </div>
         </div>
     </section>
@@ -60,5 +83,20 @@
         </div>
     </section>
 
+    <div id="contact-form">
+        <form>
+            <div class="top-bar">
+            <p>Contact me</p>
+            <p class="pointer" onclick="closeContactForm()">close</p>
+            </div>
+            <label for="name">Name *</label>
+            <input type="text" name="name" id="contact_name" required>
+            <label for="email">E-mail *</label>
+            <input type="email" name="email" id="contact_email" required>
+            <label for="textbox">Message *</label>
+            <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
 </html>

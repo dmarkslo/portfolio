@@ -1,6 +1,42 @@
 html{
     font-family: "Roboto Mono", monospace;
 }
+
+.dark-mode{
+    background: black;
+    color:white;
+}
+.dark-mode 
+#contact-form{
+    background-color: rgba(0,0,0,0.8);
+    
+}
+.dark-mode 
+#contact-form form{
+    background-color: black;
+}
+
+.dark-mode .header{
+    border: solid 1px white;
+}
+.bg-gradient {
+    background-color: #202631;
+
+    background-image: linear-gradient(to right, #202631, #000000);
+
+
+    background-image: -webkit-linear-gradient(left, #202631, #000000);
+    background-image: -o-linear-gradient(left, #202631, #000000); 
+}
+
+.nav-button {
+    color:inherit;
+    cursor: pointer;
+}
+.dark-toggle{
+    cursor: pointer;
+    margin-right: 10px;
+}
 .header{
     top: 20px;
     margin: 0 auto;
@@ -10,9 +46,11 @@ html{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-radius: 15px;
 
-    background: gray;
+    border: 2px solid black;
 }
+
 .header-content{
 
 }
@@ -31,13 +69,20 @@ html{
     max-width: 55rem;
 }
 
-.slideshow{
-
+.featured-project-images {
+    display: flex;
+    flex-direction: row;
 }
-.slideshow img{
+
+.featured-project-images img {
     max-width: 50%;
+    height: auto;
 }
 
+.featured-project-images img:nth-child(2) {
+    width: 45%;
+    height: 45%;
+}
 .project{
     display: inline-block;
     margin-right: 3rem;
@@ -50,3 +95,45 @@ html{
     color:gray;
 }
 
+#contact-form{
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.6);
+}
+
+#contact-form form{
+    position: relative;
+    pointer-events:visible;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    width: 300px;
+    padding: 5rem;
+}
+
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pointer{
+    cursor: pointer;
+}
+.pointer:hover{
+    text-decoration: underline;
+}
+label,input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+#contact_textbox{
+    height: 100px;
+}
